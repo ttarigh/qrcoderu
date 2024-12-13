@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source of Consumption</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Helvetica, Arial, sans-serif;
+            animation: flash 0.3s infinite;
+        }
+
+        em {
+            font-size: 2vw;
+            margin-bottom: 20px;
+        }
+
+        .flash-text {
+            font-size: 15vw;
+            font-weight: 900;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @keyframes flash {
+            0% {
+                background-color: white;
+                color: black;
+            }
+            50% {
+                background-color: yellow;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <em>redirecting you to the...</em>
+    <div class="flash-text">
+        SOURCE<br>
+        OF<br>
+        WHAT<br>
+        YOU<br>
+        CONSUME
+    </div>
+
+    <script>
+        // Array of livestream URLs - replace these with your actual URLs
+        const livestreams = [
+            "https://3d-printer9.click2stream.com/",
+            "https://www.youtube.com/watch?v=bResOpSIZes",
+            "https://www.youtube.com/watch?v=p0Qhe4vhYLQ",
+            "https://www.webcamtaxi.com/en/usa/massachusetts/donkey-s-barn-ipswich.html",
+            "https://www.webcamtaxi.com/en/usa/massachusetts/marthasvineyard-alpacafarm-cam.html",
+            "https://www.skylinewebcams.com/en/webcam/united-states/new-york/new-york/times-square.html",
+            "https://www.twitch.tv/factorycorpmix",
+            "https://www.earthcam.com/usa/nevada/lasvegas/index.php?cam=wedding#google_vignette",
+            "http://bulbcam.cityofpleasantonca.gov/view/view.shtml?id=117294&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1",
+            "https://livestream.com/nasdaq/live",
+            "https://www.cameraftp.com/camera/CameraPlayer.aspx?parentID=389436799&shareID=17804862&p=true",
+            "https://reallifecam.com/en/view/12_1",
+            "https://reallifecam.com/en/view/16_1",
+            "https://www.kitz.net/de/webcam-vorderstadt-nord.html",
+        ];
+
+        // After 5 seconds, redirect to random livestream
+        
+        setTimeout(() => {
+            const randomIndex = Math.floor(Math.random() * livestreams.length);
+            window.location.href = livestreams[randomIndex];
+        }, 5000);
+        
+    </script>
+</body>
+</html>
